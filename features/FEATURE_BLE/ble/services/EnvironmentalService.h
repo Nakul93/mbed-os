@@ -41,7 +41,7 @@ public:
      */
     EnvironmentalService(BLE& _ble) :
         ble(_ble),
-        temperatureCharacteristic(GattCharacteristic::UUID_TEMPERATURE_CHAR, &temperature),
+        temperatureCharacteristic(GattCharacteristic::UUID_TEMPERATURE_CHAR, &temperature,GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_INDICATE),
         humidityCharacteristic(GattCharacteristic::UUID_HUMIDITY_CHAR, &humidity),
         pressureCharacteristic(GattCharacteristic::UUID_PRESSURE_CHAR, &pressure)
     {
